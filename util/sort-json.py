@@ -14,7 +14,7 @@ def to_str(x):
 	if isinstance(x, str):
 		return x
 
-	if type(x) in {int, float}:
+	if type(x) in {int, float, bool}:
 		return str(x)
 
 	if isinstance(x, dict):
