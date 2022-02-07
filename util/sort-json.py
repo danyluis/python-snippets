@@ -12,8 +12,8 @@ def to_str(x):
 		return json.dumps(x)
 
 	if isinstance(x, dict):
-		sorted_keys = sorted(to_str(k) + ":" + to_str(x[k]) for k in x.keys())
-		return "{" + ",".join(sorted_keys) + "}"
+		sorted_items = sorted(to_str(k) + ":" + to_str(x[k]) for k in x.keys())
+		return "{" + ",".join(sorted_items) + "}"
 
 	if isinstance(x, list):
 		sorted_values = sorted([to_str(i) for i in x])
