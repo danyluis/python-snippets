@@ -8,7 +8,7 @@ def read_all():
 
 def to_str(x):
 	if type(x) in {str, int, float, bool}:
-		return json.dumps(x)
+		return json.dumps(x, separators=(',', ':'))
 
 	if isinstance(x, dict):
 		sorted_items = sorted(to_str(k) + ":" + to_str(x[k]) for k in x.keys())
